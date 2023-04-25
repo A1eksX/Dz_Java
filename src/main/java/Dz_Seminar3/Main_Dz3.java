@@ -1,14 +1,34 @@
 package Dz_Seminar3;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 public class Main_Dz3 {
     public static void main(String[] args) {
 //        ex1();
-        ex2();
+//        ex2();
+        ex3();
 
+    }
+
+    private static void ex3() {
+//        Пройти по списку из предыдущего задания и удалить повторяющиеся элементы.
+        String[] planetsNamesStringArray = {"Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Neptune", "Uranus", "Pluto"};
+        List<String> list = new ArrayList<>();
+        Random random = new Random();
+        for (int i = 0; i < 100; i++) {
+            list.add(planetsNamesStringArray[random.nextInt(planetsNamesStringArray.length)]);
+        }
+        list.sort(Comparator.naturalOrder());
+        System.out.println(list);
+        for (int i = 0; i < list.size() -1; i++) {
+            String first = list.get(i);
+            String second= list.get(i+1);
+            if (second.equals(first)) {
+                list.remove(i);
+                i--;
+            }
+        }
+        System.out.println(list);
     }
 
     private static void ex2() {
