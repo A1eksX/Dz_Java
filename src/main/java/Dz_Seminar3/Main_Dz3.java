@@ -70,6 +70,8 @@ public class Main_Dz3 {
         for (ArrayList<String> item: cataloge) {
             System.out.println( item);
         }
+//        cataloge.forEach(System.out::println); -это такая же конструкци как и в трёх строках выше *for (ArrayList<String> item: cataloge) { System.out.println( item)ж  }*
+
     }
 
     private static void ex1() {
