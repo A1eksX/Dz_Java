@@ -144,7 +144,11 @@ public class Main_Dz5 {
                 telBook.put(data, numberTel);
             }
         }
-
+ /*       for (String  key: nameCount.keySet()){
+            String names = key.toString();                      // нормальный вывод на экран
+            String count = nameCount.get(names).toString();
+            System.out.println( names + " >>> " + count);
+        }           */
         for (String  item: telBook.keySet()){
             String name = item.toString();
             String telNumber = telBook.get(name).toString();
