@@ -20,16 +20,16 @@ import java.util.Set;
 public class Main {
     public static void main(String[] args) {
 // Создание объектов класса Laptop
-        Laptop hp = new Laptop("hp", 16,1000, 16, "windows", "black");
+        Laptop hp = new Laptop("hp", 16,512, 16, "windows", "black");
         Laptop xiaomi_62 = new Laptop("xiaomi_62", 14, 512, 32, "ios", "white");
         Laptop samsung_123 = new Laptop("samsung_123", 15,256, 32, "ios", "black");
-        Laptop samsung_345 = new Laptop("samsung_345", 16,1000, 16, "linux", "black");
+        Laptop samsung_345 = new Laptop("samsung_345", 16,128, 16, "linux", "black");
         Laptop lenovo_x756 = new Laptop("lenovo_x756", 16,512, 16, "windows", "white");
-        Laptop macbook_pro = new Laptop("macbook_pro", 17,1000, 8, "ios", "white");
-        Laptop asus_Extenza_3746B = new Laptop("asus_Extenza_3746B", 17,128, 4, "linux", "red");
+        Laptop macbook_pro = new Laptop("macbook_pro", 17,256, 8, "ios", "white");
+        Laptop asus_Extenza_3746B = new Laptop("asus_Extenza_3746B", 17,128, 8, "linux", "red");
         Laptop acer_X5 = new Laptop("acer_X5", 17,128, 8, "linux", "black");
         Laptop acer_2101 = new Laptop("acer_2101" ,16,512, 16, "windows", "gray");
-        Laptop msi_katana_123 = new Laptop("msi_katana_123", 15,512, 8, "windows", "gray");
+        Laptop msi_katana_123 = new Laptop("msi_katana_123", 15,512, 64, "windows", "gray");
 
 // Создание множества
         Set <Laptop> laptop = new HashSet<>();

@@ -8,7 +8,7 @@ import java.util.Set;
 public class Laptop {
     // Создание полей
     String model;
-    float diagonal;
+    int diagonal;
     int hdd;
     int ram;
     String os;
@@ -17,7 +17,7 @@ public class Laptop {
     public Laptop() {
     }
     // Создание конструктора для создания экземпляров класса
-    public Laptop(String model, float diagonal, int hdd, int ram, String os, String color) {
+    public Laptop(String model, int diagonal, int hdd, int ram, String os, String color) {
         this.model = model;
         this.diagonal = diagonal;
         this.hdd = hdd;
@@ -33,11 +33,11 @@ public class Laptop {
 
         System.out.println("Укажите номер критерия фильрации ноутбуков," +
                 "\n1. Размер экрана 2. Жёсткий диск 3. Оперативная память 4. Тип ОС 5. Цвет");
-        String userRequest = input.nextLine();
+        String request = input.nextLine();
 
-        for (int i = 0; i < userRequest.length(); i++) {
-            if (Character.getNumericValue(userRequest.charAt(i)) == 1){
-                System.out.println("Укажите диагональ экрана ноутбука: 15, 16, 17");
+        for (int i = 0; i < request.length(); i++) {
+            if (Character.getNumericValue(request.charAt(i)) == 1){
+                System.out.println("Укажите диагональ экрана ноутбука: 14, 15, 16, 17");
                 int diagonalLaptop = input.nextInt();
 
                 for (Laptop tempDiag: laptop) {
@@ -46,8 +46,8 @@ public class Laptop {
                     }
                 }
             }
-            if (Character.getNumericValue(userRequest.charAt(i)) == 2) {
-                System.out.println("Укажите размер жёсткого диска в Гб: 300,500,600,700,1000");
+            if (Character.getNumericValue(request.charAt(i)) == 2) {
+                System.out.println("Укажите размер жёсткого диска в Гб: 128, 256, 512");
                 int enterHardDisk = input.nextInt();
 
                 for (Laptop tempLaptop : laptop) {
@@ -57,8 +57,8 @@ public class Laptop {
                 }
             }
 
-            if (Character.getNumericValue(userRequest.charAt(i)) == 3) {
-                System.out.println("Укажите количество оперативной памяти в Гб: 4, 8, 16 ");
+            if (Character.getNumericValue(request.charAt(i)) == 3) {
+                System.out.println("Укажите объём оперативной памяти в Гб: 8, 16, 32, 64 ");
                 int operativeMemory = input.nextInt();
 
                 for (Laptop tempLaptop : laptop) {
@@ -68,7 +68,7 @@ public class Laptop {
                 }
             }
 
-            if (Character.getNumericValue(userRequest.charAt(i)) == 4) {
+            if (Character.getNumericValue(request.charAt(i)) == 4) {
                 System.out.println("Укажите операционную систему: Windows, Linux, iOS");
                 String enterOS = input.nextLine().toLowerCase();
 
@@ -79,8 +79,8 @@ public class Laptop {
                 }
             }
 
-            if (Character.getNumericValue(userRequest.charAt(i)) == 5) {
-                System.out.println("Укажите цвет ноутбука: black, white, gray");
+            if (Character.getNumericValue(request.charAt(i)) == 5) {
+                System.out.println("Укажите цвет ноутбука: black, white, gray, red");
                 String enterColor = input.nextLine().toLowerCase();
                 for (Laptop tempLaptop : laptop) {
                     if (!(enterColor.equals(tempLaptop.color))) {
